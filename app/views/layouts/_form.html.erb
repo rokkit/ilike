@@ -1,4 +1,4 @@
-<%= form_tag({:controller => "pages", :action => "create"}, :method => "post", :class => "form-horizontal") do %>
+<%= form_tag({:action => "create"}, :method => "post", :class => "form-horizontal",:remote=>true) do %>
     <div>
         <p>
         Назовите несколько самых интересных тем для общения
@@ -16,5 +16,16 @@
       <p>
         Важна ли для Вас анонимность в интернете?
       </p>
+      <label class="radio">
+        <input type="radio" name="optionsRadio" id="optionsRadioYes" value="yes">
+        Да
+      </label>
+      <label class="radio">
+        <input type="radio" name="optionsRadio" id="optionsRadioNo" value="no">
+        Нет
+      </label>
+    </div>
+    <div class="span2 offset1">
+      <%= submit_tag "Готово!", :class => "btn btn-large subm-btn" %>
     </div>
 <% end %>
