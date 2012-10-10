@@ -1,6 +1,6 @@
 Like::Application.routes.draw do
 
-
+  match 'create', :to => 'pages#create'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

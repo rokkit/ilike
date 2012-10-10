@@ -1,0 +1,20 @@
+<%= form_tag({:controller => "pages", :action => "create"}, :method => "post", :class => "form-horizontal") do %>
+    <div>
+        <p>
+        Назовите несколько самых интересных тем для общения
+        </p>
+    </div>
+    <% (1..3).each do |i| %>
+        <div class="control-group">
+          <%= label_tag "quest_#{i}", "#{i}.", :class => "control-label label-text" %>
+          <div class="controls">
+            <%= text_field_tag("quest_#{i}", nil, :class => "q") %>
+          </div>
+        </div>
+    <% end %>
+    <div>
+      <p>
+        Важна ли для Вас анонимность в интернете?
+      </p>
+    </div>
+<% end %>
